@@ -207,12 +207,10 @@ function DropdownMenuSub({
 function DropdownMenuSubTrigger({
     className,
     inset,
-    lng,
     children,
     ...props
 }: React.ComponentProps<typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean;
-    lng?: string;
 }) {
     return (
         <DropdownMenuPrimitive.SubTrigger

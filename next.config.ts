@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     compress: true,
     poweredByHeader: false,
     cacheComponents: true,
+    productionBrowserSourceMaps: true,
     reactStrictMode: true,
     images: {
         remotePatterns: [

@@ -31,7 +31,7 @@ const MobileMenu = ({ lng }: { lng: string }) => {
         const segments = pathname.split('/');
         segments[1] = newLang;
         const newPath = segments.join('/');
-        router.push(newPath);
+        router.replace(newPath);
     };
     return (
         <DropdownMenu dir={lng === 'en' ? 'ltr' : 'rtl'}>
@@ -52,8 +52,7 @@ const MobileMenu = ({ lng }: { lng: string }) => {
                 <DropdownMenuGroup>
                     <DropdownMenuSub>
                         <DropdownMenuSubTrigger
-                            dir={lng === 'en' ? 'ltr' : 'rtl'}
-                            lang={lng}
+                            // dir={lng === 'en' ? 'ltr' : 'rtl'}
                         >
                             {resolvedTheme === 'light'
                                 ? t('dark-mode')
@@ -81,7 +80,7 @@ const MobileMenu = ({ lng }: { lng: string }) => {
                         </DropdownMenuPortal>
                     </DropdownMenuSub>
                     <DropdownMenuSub>
-                        <DropdownMenuSubTrigger lang={lng}>
+                        <DropdownMenuSubTrigger>
                             {lng === 'en' ? 'English' : 'العربية'}
                         </DropdownMenuSubTrigger>
                         <DropdownMenuPortal>
